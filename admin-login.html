@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Login | Madhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="admin-shell"><a class="brand" href="index.html">MADHU<span>.</span></a>
+        <section class="admin-card">
+            <p class="eyebrow">PRIVATE AREA</p>
+            <h1>Admin <span style="color:var(--accent)">Login</span></h1>
+            <p class="copy">Sign in to view portfolio enquiries.</p>
+            <form id="loginForm" class="form"><label>Admin username<input id="username" autocomplete="username"
+                        required></label><label>Password<input id="password" type="password"
+                        autocomplete="current-password" required></label><button class="btn primary">Sign in</button>
+                <p id="loginNote" class="note">Admin access is configured in the backend .env file. There is no public
+                    registration.</p>
+            </form>
+            <section id="inbox" hidden>
+                <h2>Enquiries</h2><button id="logout" class="btn ghost">Log out</button>
+                <div id="messages"></div>
+            </section>
+        </section><a class="back" href="index.html">← Back to portfolio</a>
+    </main>
+    <style>
+        .admin-shell {
+            width: min(520px, 90%);
+            margin: 8vh auto
+        }
+
+        .admin-card {
+            margin: 35px 0;
+            padding: 30px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 18px
+        }
+
+        .admin-card h1 {
+            font: 700 2.4rem 'Space Grotesk'
+        }
+
+        .admin-card .form {
+            margin-top: 25px
+        }
+
+        .back {
+            color: var(--mint)
+        }
+
+        #messages article {
+            border-top: 1px solid var(--line);
+            padding: 14px 0;
+            color: var(--muted)
+        }
+
+        #messages b {
+            color: white
+        }
+    </style>
+    <script src="api-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

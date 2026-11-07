@@ -1,0 +1,1 @@
+See the main README.txt for complete setup. Copy .env.example to .env, fill in credentials and MongoDB URI, then run npm install and npm start. Never publish .env.
